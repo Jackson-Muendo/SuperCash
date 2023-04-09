@@ -11,6 +11,10 @@ import { StatementComponent } from './statement/statement.component';
 import { MinisupercashComponent } from './minisupercash/minisupercash.component';
 import { CommissionComponent } from './minisupercash/commission/commission.component';
 import { RecruitComponent } from './minisupercash/recruit/recruit.component';
+import { TransfersComponent } from './minisupercash/transfers/transfers.component';
+import { PaysComponent } from './minisupercash/pays/pays.component';
+import { WithdrawsComponent } from './minisupercash/withdraws/withdraws.component';
+import { StatementsComponent } from './minisupercash/statements/statements.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { RecruitComponent } from './minisupercash/recruit/recruit.component';
     StatementComponent,
     MinisupercashComponent,
     CommissionComponent,
-    RecruitComponent
+    RecruitComponent,
+    TransfersComponent,
+    PaysComponent,
+    WithdrawsComponent,
+    StatementsComponent
   ],
   imports: [
     BrowserModule,
