@@ -21,7 +21,7 @@ const routes: Routes = [
 {path: 'sendCash',component: TransferComponent},
 {path: 'payCash',component: TransferComponent},
 {path: 'superCashStatement',component: StatementComponent},
-{path: 'recruit',component: RecruitComponent},
+{path: 'recruit-members',component: RecruitComponent},
 {path: 'withdrawCash',component: WithdrawComponent},
 {path: 'sendCommission',component: TransfersComponent},
 {path: 'payCommission',component: PaysComponent},
