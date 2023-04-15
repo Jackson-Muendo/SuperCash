@@ -1,11 +1,11 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Account } from "@app/_models/account";
-import { Customer } from "@app/_models/customer";
-import { Transaction } from "@app/_models/transaction";
+import { Account } from "../models/account";
+import { Customer } from "../models/customer";
+import { Transaction } from "../models/transaction";
 import { Observable } from "rxjs";
-import { TransactionInput } from "@app/_models/transactioninput";
-import { AccountInput } from "@app/_models/accountinput";
+import { TransactionInput } from "../models/transactioninput";
+import { AccountInput } from "../models/accountinput";
 
 @Injectable({
   providedIn: "root",
@@ -48,3 +48,4 @@ export class TransactionService {
     );
   }
 }
+  

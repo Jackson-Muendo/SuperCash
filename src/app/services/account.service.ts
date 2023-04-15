@@ -1,11 +1,11 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Account } from "@app/_models/account";
-import { Customer } from "@app/_models/customer";
+import { Account } from "../models/account";
+import { Customer } from "../models/customer";
 import { Observable } from "rxjs";
-import { AuthenticationService } from "@app/_services";
-import { AccountInput } from "@app/_models/accountinput";
-import { AccountCreationStatus } from "@app/_models/accountCreationStatus";
+import { AuthenticationService } from "../services";
+import { AccountInput } from "../models/accountinput";
+import { AccountCreationStatus } from "../models/accountCreationStatus";
 
 @Injectable({
   providedIn: "root",

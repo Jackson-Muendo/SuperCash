@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { TransfersComponent } from './minisupercash/transfers/transfers.componen
 import { PaysComponent } from './minisupercash/pays/pays.component';
 import { WithdrawsComponent } from './minisupercash/withdraws/withdraws.component';
 import { StatementsComponent } from './minisupercash/statements/statements.component';
+import { RoutesComponent } from './routes/routes.component';
+import { RoutezComponent } from './minisupercash/routez/routez.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,15 @@ import { StatementsComponent } from './minisupercash/statements/statements.compo
     TransfersComponent,
     PaysComponent,
     WithdrawsComponent,
-    StatementsComponent
+    StatementsComponent,
+    RoutesComponent,
+    RoutezComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
