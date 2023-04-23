@@ -25,7 +25,8 @@ const routes: Routes = [
 {path: 'send-commission',component: TransfersComponent},
 {path: 'pay-commission',component: PaysComponent},
 {path: 'withdraw-commission',component: WithdrawsComponent},
-{path: 'commission-Statement',component: StatementsComponent}
+{path: 'commission-Statement',component: StatementsComponent},
+{path: 'your-mini-super-cash',component: MinisupercashComponent}
 ];
 
 @NgModule({
