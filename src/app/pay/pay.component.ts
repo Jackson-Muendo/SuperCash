@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./pay.component.css']
 })
 export class PayComponent {
+  fromAccount: number;
+  toAccount: number;
+  amount: number;
+
+  transferFunds(){
+
+  }
 
 }

@@ -1,11 +1,20 @@
+<!--<nav>
+  <ul>
+    <li><button><a routerLink="/send-cash"><h1>SEND</h1></a></button></li>
+    <li><button><a routerLink="/payCash"><h1>PAY</h1></a></button></li>
+    <li><button> <a routerLink="/withdrawCash"><h1>WITHDRAW</h1></a></button></li>
+    <li><button> <a routerLink = '/superCashStatement'><h1>STATEMENT</h1></a></button></li>
+  </ul>
+</nav>-->
 <table cellpadding="20px">
   <tr>
-    <td ><button><a routerLink="/sendCash"><h1>SEND</h1></a></button></td>
-    <td><button> <a routerLink="/payCash"><h1>PAY</h1></a></button></td>
-    <td><button> <a routerLink="/withdrawCash"><h1>WITHDRAW</h1></a></button></td>
-    <td><button> <a routerLink = '/superCashStatement'><h1>STATEMENT</h1></a></button></td>
+    <td ><button><a routerLink="/send-cash"><h1>SEND</h1></a></button></td>
+    <td><button><a routerLink="/pay-cash"><h1>PAY</h1></a></button></td>
+    <td><button> <a routerLink="/withdraw-cash"><h1>WITHDRAW</h1></a></button></td>
+    <td><button> <a routerLink = '/super-cash-statement'><h1>STATEMENT</h1></a></button></td>
   </tr>
 </table>
+<router-outlet></router-outlet>
 
 <style type="text/css">
   table{

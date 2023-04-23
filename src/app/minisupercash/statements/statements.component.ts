@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./statements.component.css']
 })
 export class StatementsComponent {
+  fromAccount: number;
+  toAccount: number;
+  amount: number;
+
+  constructor() {}
+
+  transferFunds() {
+    
+  }
+
 
 }

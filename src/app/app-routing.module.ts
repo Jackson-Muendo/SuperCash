@@ -16,16 +16,15 @@ import { WithdrawsComponent } from './minisupercash/withdraws/withdraws.componen
 import { StatementsComponent } from './minisupercash/statements/statements.component';
 
 const routes: Routes = [
-{path: '', component: AppComponent  },
 {path: 'balance', component: BalanceComponent},
-{path: 'sendCash',component: TransferComponent},
-{path: 'payCash',component: TransferComponent},
-{path: 'superCashStatement',component: StatementComponent},
+{path: 'send-cash',component: TransferComponent},
+{path: 'pay-cash',component: PayComponent},
+{path: 'super-cash-statement',component: StatementComponent},
 {path: 'recruit-members',component: RecruitComponent},
-{path: 'withdrawCash',component: WithdrawComponent},
-{path: 'sendCommission',component: TransfersComponent},
-{path: 'payCommission',component: PaysComponent},
-{path: 'withdrawCommission',component: WithdrawsComponent},
+{path: 'withdraw-cash',component: WithdrawComponent},
+{path: 'send-commission',component: TransfersComponent},
+{path: 'pay-commission',component: PaysComponent},
+{path: 'withdraw-commission',component: WithdrawsComponent},
 {path: 'commission-Statement',component: StatementsComponent}
 ];
 

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./withdraw.component.css']
 })
 export class WithdrawComponent {
+  fromAccount: number;
+  toAccount: number;
+  amount: number;
+
+  constructor() {}
+
+  transferFunds() {
+    
+  }
 
 }

@@ -7,7 +7,7 @@ import { TransactionInput } from "../models/transactioninput";
 import { first } from "rxjs/operators";
 
 import {TransactionService} from '../services/transaction.service'
-import {AccountService} from '../services/account.service'
+import {TransferService} from '../services/transfer.service'
 import {AuthenticationService} from '../services/authentication.service'
 
 @Component({
@@ -16,6 +16,17 @@ import {AuthenticationService} from '../services/authentication.service'
   styleUrls: ['./transfer.component.css']
 })
 export class TransferComponent {
+  fromAccount: number;
+  toAccount: number;
+  amount: number;
+
+  constructor() {}
+
+  transferFunds() {
+    
+  }
+}
+
   /*transferForm: FormGroup;
   sourceAccount = new AccountInput();
   targetAccount = new AccountInput();
@@ -118,7 +129,7 @@ export class TransferComponent {
     this.authenticationService.logout();
     this.router.navigate(["/login"]);
   }*/
-}
+
 
 
 
