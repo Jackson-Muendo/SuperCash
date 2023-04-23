@@ -17,13 +17,14 @@
   <tr>
     
     
-    <td><button><a routerLink="/pay-cash"><h1>PAY</h1></a></button></td>
-    <td><button> <a routerLink="/withdraw-cash"><h1>WITHDRAW</h1></a></button></td>
-    <td><button> <a routerLink = '/super-cash-statement'><h1>STATEMENT</h1></a></button></td>-->
+    
+    <td><button><a routerLink="/pay-cash"><img src="assets/img/transact/pay.png" alt="loading"><h1>PAY</h1></a></button></td>
+    <td><button><a routerLink="/withdraw-cash"><img src="assets/img/transact/withdrawal.png" alt="loading"><h1>WITHDRAW</h1></a></button></td>
+    <td><button><a routerLink = '/super-cash-statement'><img src="assets/img/transact/statement.png" alt="loading"><h1>STATEMENT</h1></a></button></td>
     
   </tr>
 </table>
-<router-outlet></router-outlet>
+
 
 <style type="text/css">
   table{
@@ -34,14 +35,13 @@
   h1{
     color: green;
   }
-
-</style>
-
-<style type="text/css">
-  h1{
-    color: green;
-  }
+  
   form,p{
-            text-align: center;
+          text-align: center;
       }
+      img{
+        height: 40px;
+      }
+
 </style>
+

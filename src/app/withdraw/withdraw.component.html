@@ -14,13 +14,14 @@
     <table cellpadding="20px">
       <th>INSTEAD</th>
   <tr>
-    <td ><button><a routerLink="/send-cash"><h1>SEND</h1></a></button></td>
-    <td><button><a routerLink="/pay-cash"><h1>PAY</h1></a></button></td>
-    <td><button> <a routerLink = '/super-cash-statement'><h1>STATEMENT</h1></a></button></td>-->
+    <td ><button><a routerLink="/send-cash"><img src="assets/img/transact/send.png" alt="loading"><h1>SEND</h1></a></button></td>
+    <td><button><a routerLink="/pay-cash"><img src="assets/img/transact/pay.png" alt="loading"><h1>PAY</h1></a></button></td>
+    
+    <td><button><a routerLink = '/super-cash-statement'><img src="assets/img/transact/statement.png" alt="loading"><h1>STATEMENT</h1></a></button></td>
     
   </tr>
 </table>
-<router-outlet></router-outlet>
+
 
 <style type="text/css">
   table{
@@ -31,15 +32,12 @@
   h1{
     color: green;
   }
-
-</style>
-
-<!--<button routerLink="/payCash"><h1>PAY</h1></button>-->
-<style type="text/css">
-  h1{
-    color: green;
-  }
+  
   form,p{
             text-align: center;
       }
+      img{
+        height: 40px;
+      }
 </style>
+
