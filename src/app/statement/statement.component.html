@@ -1,4 +1,4 @@
-<p>hey statements</p>
+<h1>Get statement</h1>
 <form (submit)="transferFunds()">
       <label for="fromAccount">From Account:</label>
       <input type="number" id="fromAccount" [(ngModel)]="fromAccount" required>
@@ -9,8 +9,8 @@
       <label for="amount">Amount:</label>
       <input type="number" id="amount" [(ngModel)]="amount" required>
 
-      <button type="submit">Transfer Funds</button>
-      <button> <a routerLink = '/super-cash'>Cancel</a></button>
+      <button type="submit">Statements</button>
+      <button> <a routerLink = '/super-cash'><b>Cancel</b></a></button>
     </form>
 
     <!--<table cellpadding="20px">
@@ -30,9 +30,9 @@
     width: 40%;
     margin: auto;
   }
-
-  h1{
+h1{
     color: green;
+    text-align: center;
   }
   form,p{
             text-align: center;

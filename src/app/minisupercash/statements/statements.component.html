@@ -1,4 +1,4 @@
-<p>hey  statements</p>
+<h1>Get commission statement</h1>
 <form (submit)="transferFunds()">
       <label for="fromAccount">From Account:</label>
       <input type="number" id="fromAccount" [(ngModel)]="fromAccount" required>
@@ -9,8 +9,8 @@
       <label for="amount">Amount:</label>
       <input type="number" id="amount" [(ngModel)]="amount" required>
 
-      <button type="submit">Transfer Funds</button>
-      <button> <a routerLink = '/your-mini-super-cash'>Cancel</a></button>
+      <button type="submit">Commission Statements</button>
+      <button> <a routerLink = '/your-mini-super-cash'><b>Cancel</b></a></button>
     </form>
     <!--<table cellpadding="20px">
       <th>INSTEAD</th>
@@ -34,6 +34,7 @@
 
   h1{
     color: green;
+    text-align: center;
   }
   form,p{
             text-align: center;
