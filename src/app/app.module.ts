@@ -18,6 +18,7 @@ import { WithdrawsComponent } from './minisupercash/withdraws/withdraws.componen
 import { StatementsComponent } from './minisupercash/statements/statements.component';
 import { RoutesComponent } from './routes/routes.component';
 import { RoutezComponent } from './minisupercash/routez/routez.component';
+import { RouteslinkComponent } from './routeslink/routeslink.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RoutezComponent } from './minisupercash/routez/routez.component';
     WithdrawsComponent,
     StatementsComponent,
     RoutesComponent,
-    RoutezComponent
+    RoutezComponent,
+    RouteslinkComponent
   ],
   imports: [
     BrowserModule,

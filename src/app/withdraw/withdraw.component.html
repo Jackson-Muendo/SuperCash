@@ -11,9 +11,35 @@
 
       <button type="submit">Transfer Funds</button>
     </form>
-<!--<button routerLink="/payCash"><h1>PAY</h1></button>
+    <table cellpadding="20px">
+      <th>INSTEAD</th>
+  <tr>
+    <td ><button><a routerLink="/send-cash"><h1>SEND</h1></a></button></td>
+    <td><button><a routerLink="/pay-cash"><h1>PAY</h1></a></button></td>
+    <td><button> <a routerLink = '/super-cash-statement'><h1>STATEMENT</h1></a></button></td>-->
+    
+  </tr>
+</table>
+<router-outlet></router-outlet>
+
+<style type="text/css">
+  table{
+    width: 40%;
+    margin: auto;
+  }
+
+  h1{
+    color: green;
+  }
+
+</style>
+
+<!--<button routerLink="/payCash"><h1>PAY</h1></button>-->
 <style type="text/css">
   h1{
     color: green;
   }
-</style>-->
+  form,p{
+            text-align: center;
+      }
+</style>
