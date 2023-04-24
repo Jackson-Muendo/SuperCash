@@ -5,25 +5,32 @@
     <li><button> <a routerLink="/withdrawCash"><h1>WITHDRAW</h1></a></button></li>
     <li><button> <a routerLink = '/superCashStatement'><h1>STATEMENT</h1></a></button></li>
   </ul>
-</nav>-->
-<app-balance></app-balance>
+</nav>--><br><br><br>
+<app-balance></app-balance><br><br><br><br><br><br>
 <table cellpadding="20px">
   <tr>
     <!--<td><button><a routerLink="/super-cash"><h1>SC</h1></a></button></td>
     <td ><button><a routerLink="/send-cash"><h1>SEND</h1></a></button></td>
     <td><button><a routerLink="/pay-cash"><h1>PAY</h1></a></button></td>
     <td><button> <a routerLink="/withdraw-cash"><h1>WITHDRAW</h1></a></button></td>
-    <td><button> <a routerLink = '/super-cash-statement'><h1>STATEMENT</h1></a></button></td>-->
-    <td><button> <a routerLink = '/super-cash'><h1><i>SUPERCASH</i></h1></a></button></td>
-    <td><button> <a routerLink = '/your-mini-super-cash'><h1><i>MINISUPERCASH</i></h1></a></button></td>
+    <td><button> <a routerLink = '/super-cash-statement'><h1>STATEMENT</h1></a></button></td>
+    <td><button> <a routerLink = '/super-cash'><h1><i>SUPERCASH</i></h1></a></button></td>-->
+    <app-routeslink></app-routeslink>
+    <div class="card"><div class="container"><br><br><br><br><br><br><br><br><br>
+  <table><tr><td><button> <a routerLink = '/your-mini-super-cash'><h1><i>MINISUPERCASH</i></h1></a></button></td>
+  <td><button> <a routerLink = '/your-mini-super-cash'><h1><i>LOANS</i></h1></a></button></td></tr></table><br><br>
+  </div></div>
+    <!--<td><button> <a routerLink = '/your-mini-super-cash'><h1><i>MINISUPERCASH</i></h1></a></button></td>-->
   </tr>
 </table>
+
+
 
 <router-outlet></router-outlet>
 
 <style type="text/css">
   table{
-    width: 40%;
+    width: 70%;
     margin: auto;
   }
 
@@ -33,5 +40,7 @@
   i{
     color: blueviolet;
   }
-  
+  button{
+    text-align: center;
+  }
 </style>
