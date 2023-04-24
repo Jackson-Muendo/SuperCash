@@ -15,6 +15,7 @@ import { PaysComponent } from './minisupercash/pays/pays.component';
 import { WithdrawsComponent } from './minisupercash/withdraws/withdraws.component';
 import { StatementsComponent } from './minisupercash/statements/statements.component';
 import {RouteslinkComponent} from './routeslink/routeslink.component';
+import {MainrouteComponent} from './mainroute/mainroute.component'
 
 const routes: Routes = [
 {path: 'balance', component: BalanceComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
 {path: 'withdraw-commission',component: WithdrawsComponent},
 {path: 'commission-Statement',component: StatementsComponent},
 {path: 'your-mini-super-cash',component: MinisupercashComponent},
-{path: 'super-cash',component: RouteslinkComponent}
+{path: 'super-cash',component: RouteslinkComponent},
+{path: '',component: MainrouteComponent}
 ];
 
 @NgModule({

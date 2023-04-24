@@ -19,6 +19,7 @@ import { StatementsComponent } from './minisupercash/statements/statements.compo
 import { RoutesComponent } from './routes/routes.component';
 import { RoutezComponent } from './minisupercash/routez/routez.component';
 import { RouteslinkComponent } from './routeslink/routeslink.component';
+import { MainrouteComponent } from './mainroute/mainroute.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { RouteslinkComponent } from './routeslink/routeslink.component';
     StatementsComponent,
     RoutesComponent,
     RoutezComponent,
-    RouteslinkComponent
+    RouteslinkComponent,
+    MainrouteComponent
   ],
   imports: [
     BrowserModule,
