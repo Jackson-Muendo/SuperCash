@@ -1,2 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
-html,body{height: 100%;}
+html,body{
+	background-color: lightskyblue;
+	height: 100%;
+
+}
+a:link{
+	color: red;
+}
+a:visited{
+	color: green;
+
+}
+a:hover{
+	color: hotpink;
+}
+a:active{
+	color: blue;
+}
+.button1{
+			border-radius: 50%;
+			background-color: lightgreen;
+		}
+b{
+    color: red;
+  }
+ .card{
+ 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ 	transition: 0.3s;
+ }
+ .cards{
+ 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ 	transition: 0.3s;
+ 	border-radius: 1px;
+ }
+ .container{
+ 	padding: 2px 16px;
+ }
+ img{
+        height: 50px;
+        width: 80%;
+      }
+  
