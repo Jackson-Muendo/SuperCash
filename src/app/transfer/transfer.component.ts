@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { Account } from "../models/account";
 import { AccountInput } from "../models/accountinput";
 import { TransactionInput } from "../models/transactioninput";
+import {Transfer} from '../models/transfer'
 import { first } from "rxjs/operators";
 
 import {TransactionService} from '../services/transaction.service'
@@ -15,123 +16,56 @@ import {AuthenticationService} from '../services/authentication.service'
   templateUrl: './transfer.component.html',
   styleUrls: ['./transfer.component.css']
 })
+
 export class TransferComponent {
-  fromAccount: number;
-  toAccount: number;
-  amount: number;
-
-  constructor() {}
-
-  transferFunds() {
-    
-  }
-}
-
-  /*transferForm: FormGroup;
-  sourceAccount = new AccountInput();
-  targetAccount = new AccountInput();
-
-  loading = false;
-  submitted = false;
-  returnUrl: string;
-  error = "";
-  accounts: Account[];
-  toggle = false;
+ /* transferForm: FormGroup;
+  senderBalance: number = 1000;
+  recipientBalance: number = 0;
+  transactionHistory: any[] = [];
+  errorMessage: string;
+  successMessage: string;
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private transactionService: TransactionService,
-    private accountService: AccountService,
-    private authenticationService: AuthenticationService
-  ) {}
-
-  ngOnInit(): void {
+    private transferService: TransferService
+  ) {
     this.transferForm = this.formBuilder.group({
-      sourceaccountid: ["", Validators.required],
-      targetaccountid: ["", Validators.required],
-      amount: ["", Validators.required],
+      recipientName: ['', Validators.required],
+      recipientAccount: ['', Validators.required],
+      amount: ['', [Validators.required, Validators.min(0.01)]],
+      description: ['']
     });
-    this.accountService
-      .getCustAccounts(this.route.snapshot.params['customerid'])
-      .pipe(first())
-      .subscribe(
-        (res) => {
-          console.log(res);
-        },
-        (error) => {
-          this.error = error;
-          this.loading = false;
-        }
-      );
-    // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams["returnUrl"] || "/";
-  }
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.transferForm.controls;
   }
 
-  transfer() {
-    this.submitted = true;
+  transfer(): void {
+    // Get the values from the form
+    const transfer: Transfer = this.transferForm.value;
 
-    // stop here if form is invalid
+    // Validate the form
     if (this.transferForm.invalid) {
+      // Display an error message if the form is invalid
+      this.errorMessage = 'Please fill in all required fields.';
+      return;
+    } else if (transfer.amount > this.senderBalance) {
+      // Display an error message if the sender doesn't have enough funds to make the transfer
+      this.errorMessage = 'Insufficient funds. Please try again with a smaller amount.';
       return;
     }
 
-    this.loading = true;
-
-    this.sourceAccount.accountId = this.f['sourceaccountid'].value;
-    this.targetAccount.accountId = this.f['targetaccountid'].value;
-
-    console.log(this.targetAccount);
-    console.log(this.sourceAccount);
-
-    this.transactionService
-      .transfer(this.sourceAccount, this.targetAccount, this.f['amount'].value)
-      .pipe(first())
-      .subscribe(
-        (account) => {
-          console.log(account);
-          this.toggle = true;
-          this.loading = false;
-          this.router.navigate([
-            "customer",
-            this.route.snapshot.params['customerid'],
-          ]);
-        },
-        (error) => {
-          this.error = error;
-          this.loading = false;
-        }
-      );
-  }
-
-  deposit() {
-    this.router.navigate(["deposit"], { relativeTo: this.route });
-  }
-  withdraw() {
-    this.router.navigate(["withdraw"], { relativeTo: this.route });
-  }
-  viewTransactions() {
-    this.router.navigate(["transactions"], { relativeTo: this.route });
-  }
-  viewStatements() {
-    this.router.navigate(["statements"], { relativeTo: this.route });
-  }
-
-  getDashboard() {
-    this.router.navigate(["/customer", this.route.snapshot.params['customerid']]);
-  }
-  logout() {
-    this.authenticationService.logout();
-    this.router.navigate(["/login"]);
+    // Make the HTTP request to transfer the funds
+    this.transferService.transfer(transfer).subscribe(
+      response => {
+        // Update the UI with the new account balances and transaction history
+        this.successMessage = 'Transfer successful!';
+        this.senderBalance -= transfer.amount;
+        this.recipientBalance += transfer.amount;
+        this.transactionHistory.push(response);
+        this.transferForm.reset();
+      },
+      error => {
+        // Display an error message if the HTTP request fails
+        this.errorMessage = 'An error occurred while processing your request. Please try again later.';
+      }
+    );
   }*/
-
-
-
-
-
-
+}

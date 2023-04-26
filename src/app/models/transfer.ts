@@ -1,7 +1,6 @@
 export interface Transfer {
-  id: number;
-  fromAccount: number;
-  toAccount: number;
+  recipientName: string;
+  recipientAccount: string;
   amount: number;
-  date: Date;
+  description: string;
 }

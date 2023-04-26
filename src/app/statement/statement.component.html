@@ -1,17 +1,50 @@
 <h1>Get statement</h1>
-<form (submit)="transferFunds()">
-      <label for="fromAccount">From Account:</label>
-      <input type="number" id="fromAccount" [(ngModel)]="fromAccount" required>
+<h1><img src="assets/img/transact/send.png" alt="loading"></h1><br><br><br>
+<table >
+                <thead>
+                  <tr>
+                    <th>Trasaction id</th>
+                    <th>From Name</th>
+                    <th>From Number</th>
+                    <th>To Name</th>
+                    <th>To Number</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
 
-      <label for="toAccount">To Account:</label>
-      <input type="number" id="toAccount" [(ngModel)]="toAccount" required>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr >
+                    <td> transaction.id </td>
+                    <td>
+                      transaction.sourceOwnerName
+                    </td>
+                    <td>
+                    
+              transaction.sourceAccountId
+            
+                    </td>
+                    <td>
+                       transaction.targetOwnerName  
+           
+                    </td>
+                    <td>
+                       
+              transaction.targetAccountId
+            
+                    </td>
+                    <td> transaction.reference </td>
+                    <td>₹  transaction.amount </td>
+                    <!--<td >{{ transaction.initiationDate.substring(0, 10).split("-").reverse().join("-") }}</td>-->
 
-      <label for="amount">Amount:</label>
-      <input type="number" id="amount" [(ngModel)]="amount" required>
+                  </tr>
+                </tbody>
 
-      <button type="submit">Statements</button>
-      <button> <a routerLink = ''><b>Cancel</b></a></button>
-    </form>
+              </table>
+     <p><button type="submit">Statements</button>
+      <button> <a routerLink = ''><b>Cancel</b></a></button></p>
+    
 
     <!--<table cellpadding="20px">
       <th>INSTEAD</th>
@@ -27,18 +60,37 @@
 
 <style type="text/css">
   table{
-    width: 40%;
+    width: 90%;
     margin: auto;
   }
-h1{
+
+  h1{
     color: green;
     text-align: center;
   }
-  form,p{
-            text-align: center;
+  
+  form,p,{
+          text-align: center;
+          
       }
       img{
         height: 40px;
+      }
+      input,h1{
+        width: 70%;
+        height: 70px;
+        font-size: 50px;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid gray;
+        outline: none;
+        margin-left: 15%;
+        
+      }
+      button{
+        text-align: center;
+        width: 20%;
+        margin-left: 40%;
       }
 
 </style>
