@@ -1,8 +1,11 @@
+import ""
+
+
 <div class="container">
 	<div class="form">
 	  <h2>Hey Jackson increase your earnings</h2>
 	  <h3>Add Partners to your company</h3>
-	  <button><a routerLink="/your-mini-super-cash"><b>Back</b></a></button>
+	  <button class="back"><a routerLink="/your-mini-super-cash"><b>Back</b></a></button>
 	  <input type="number" [(ngModel)]="phoneNumber" placeholder="Enter Phone Number">
 	  <button (click)="sendCode()">Send Code</button>
 	  <p *ngIf="codeSent" class="success">Verification code sent successfully!</p>

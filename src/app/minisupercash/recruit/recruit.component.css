@@ -54,4 +54,7 @@
   .form p.error {
     color: red;
   }
-  
+
+  .back {
+    margin-bottom: 1rem;
+  }
