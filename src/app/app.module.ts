@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
+<<<<<<< HEAD
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {TransferService} from './services/transfer.service'
+=======
+
+import { HttpClientModule } from '@angular/common/http';
+
+>>>>>>> b2c93abe0dd43b1ffb19fb44ea319142bf2bb6c8
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BalanceComponent } from './balance/balance.component';
@@ -53,3 +59,4 @@ import { MainrouteComponent } from './mainroute/mainroute.component';
   bootstrap: [AppComponent,TransferService]
 })
 export class AppModule { }
+
