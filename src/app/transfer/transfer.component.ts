@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Account } from "../models/account";
 import { AccountInput } from "../models/accountinput";
@@ -18,6 +18,16 @@ import {AuthenticationService} from '../services/authentication.service'
 })
 
 export class TransferComponent {
+  constructor(public transferService: TransferService){}
+  onTransfer(form: NgForm){
+    if(form.invalid){
+       return;
+    }
+    console.log(form.value.recipientAccount)
+    this.transferService.createSend(form.value.recipientAccount,form.value.amount);
+  };
+
+  }
  /* transferForm: FormGroup;
   senderBalance: number = 1000;
   recipientBalance: number = 0;
@@ -68,4 +78,4 @@ export class TransferComponent {
       }
     );
   }*/
-}
+

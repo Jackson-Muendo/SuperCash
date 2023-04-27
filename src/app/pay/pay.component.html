@@ -3,16 +3,16 @@
   <h1><img src="assets/img/transact/send.png" alt="loading"></h1>
   <form >
     <div>
-      <input type="number" id="PayBill" placeholder="Enter SuperCash PayBill No." formControlName="recipientAccount">
+      <input type="number" id="PayBill" name= "PayBill" ngModel required #paybill= 'ngModel' placeholder="Enter SuperCash PayBill No.">
     </div><br><br>
     <div>
-      <input type="number" id="recipientAccount" placeholder="Enter SuperCash Account No." formControlName="recipientAccount">
+      <input type="number" id="recipientAccount" name="recipientAccount" ngModel required #recipientAccount='ngModel' placeholder="Enter Account No.">
     </div><br><br>
     <div>
       
       <div>
         
-        <input type="number" id="amount" placeholder="Enter Amount" formControlName="amount">
+        <input type="number" id="amount" name="amount" ngModel required #amount='ngModel' placeholder="Enter Amount" >
       </div>
     </div><br><br>
     <div>
@@ -24,7 +24,7 @@
       <button> <a routerLink = ''><b>Cancel</b></a></button>
 
     </div>
-
+    <div *ngIf = "amount.invalid">required</div>
     
   </form>
  
@@ -64,8 +64,8 @@
       }
       input,button,h1{
         width: 70%;
-        height: 70px;
-        font-size: 50px;
+        height: 60px;
+        font-size: 40px;
         text-align: center;
         border: none;
         border-bottom: 1px solid gray;
